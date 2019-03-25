@@ -1,0 +1,77 @@
+#include<stdio.h>
+int main()
+{
+int j =0;int name ; int arr1[10]; int index =0; int arr2[10];
+do
+{
+     int flag = 1;
+     scanf("%d",&arr2[index]);
+     if(arr2[index] > 0 | arr2[index] == -1)
+     {
+     if(arr2[index] == -1 )
+     {
+          break;
+     }
+
+     for(int i =0; i < index; i++ )
+     {
+          if(arr2[i] == arr2[index])
+          {
+               flag = 0;
+          }
+     }
+
+
+     if(flag == 1)
+     {
+          arr1[j] = arr2[index];
+          j++;
+
+     }
+
+     index++;
+
+}
+
+
+}
+
+while(j<10);
+int sum =0;
+
+for(int i = 0; i < j; i++)
+{
+     printf("%d\n",arr1[i] );
+}
+
+int b[5] = {1,2,3,4,5};
+for(int k = 0; k < j; k++)
+{
+
+    int flag = 0;
+     for(int h =0; h < 5; h++)
+     {
+          if(arr1[k] == b[h])
+               flag = 1;
+     }
+
+     if(flag ==0)
+     {
+          printf("%d\n",arr1[k] );
+          sum++;
+     }
+
+
+}
+
+printf("%d",sum);
+
+
+
+
+
+
+
+
+
+}
